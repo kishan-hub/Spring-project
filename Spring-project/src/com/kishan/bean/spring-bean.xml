@@ -4,21 +4,33 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-<!-- Example of primitive injection -->
+ 
+<!-- Example of primitive injection
 <bean id ="employe" class="com.kishan.primitiveInjection.Employe">
 <property name="empId" value ="234"/>
 <property name="empName" value="kishan kumar"/>
 </bean>
+ -->
 
-<!-- Example of setter injection of  -->
+<!-- Example of setter injection of 
 <bean id ="radio" class="com.kishan.setterinjection.Radio">
 <property name="iReciver" ref="reciver10Hz"/>
 </bean>
 <bean id ="reciver10Hz" class="com.kishan.setterinjection.Reciver10Hz"/>
 
-<bean id ="reciver20Hz" class="com.kishan.setterinjection.Reciver20Hz"/>
+ -->
 
 
+<!-- Example of Constructor Injection
+<bean id ="university" class="com.kishan.constructorinjection.University">
+ <constructor-arg ref ="college"/>
+-->
 
+ <bean id ="college" class="com.kishan.collectioninjection.College"/>
+  
+ <bean id ="student" class="com.kishan.collectioninjection.Student">
+ <property name="sid" value="234"/>
+ <property name="studentName" value="kishan kumar"/>
+ </bean>
+ 
 </beans>
