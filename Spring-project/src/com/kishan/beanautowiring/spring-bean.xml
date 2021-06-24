@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id ="robot"  class="com.kishan.beanautowiring.Robot" autowire="byName"/>
+
+<bean id ="sensor" class ="com.kishan.beanautowiring.Sensor">
+<property name="id" value="10"/>
+<property name="type" value="P3"/>
+</bean>
+
+<bean id ="chip" class="com.kishan.beanautowiring.Chip">
+<property name="id" value="1131"/>
+<property name="range" value="5.9m"/>
+</bean>
+
+</beans>
