@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- Example of primitive injection -->
+<bean id ="employe" class="com.kishan.primitiveInjection.Employe">
+<property name="empId" value ="234"/>
+<property name="empName" value="kishan kumar"/>
+</bean>
+
+<!-- Example of setter injection of  -->
+<bean id ="radio" class="com.kishan.setterinjection.Radio">
+<property name="iReciver" ref="reciver10Hz"/>
+</bean>
+<bean id ="reciver10Hz" class="com.kishan.setterinjection.Reciver10Hz"/>
+
+<bean id ="reciver20Hz" class="com.kishan.setterinjection.Reciver20Hz"/>
+
+
+
+</beans>
